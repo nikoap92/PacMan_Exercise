@@ -26,13 +26,11 @@ function makePac() {
   newimg.style.position = 'absolute';
   newimg.src = './images/PacMan1.png';
 
-  // TODO: set position here
-
   newimg.width = 50;
   newimg.style.left = position.x;
   newimg.style.top = position.y;
 
-  // TODO add new Child image to game
+
   game.appendChild(newimg);
 
   // return details in an object
@@ -57,7 +55,9 @@ function update() {
 }
 
 function checkCollisions(item) {
-  // TODO: detect collision with all walls and make pacman bounce
+  
+  //detect collision with all walls and make pacman bounce
+
   if (
     item.position.x + item.velocity.x + item.newimg.width > window.innerWidth ||
     item.position.x + item.velocity.x <= 0
